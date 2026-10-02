@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title id="page-title">缘·华韵相逢 | 文化班人格测试</title>
+<meta name="description" content="博大中华文化学会迎新营 20 周年 · 文化班人格测试，24 秒找到最适合你的文化班。">
+<link rel="icon" href="assets/brand/zh-emblem.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="brand">
+      <img src="assets/brand/zh-emblem.png" alt="博大中华文化学会">
+      <div>
+        <span class="brand-name">缘 · 华韵相逢</span>
+        <span class="brand-sub" data-i18n="brand-sub">文化班人格测试</span>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="nav-link" data-nav="directory" data-i18n="nav-directory">浏览全部文化班</button>
+      <button class="lang-btn" id="lang-toggle" type="button" aria-label="Switch language">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section id="screen-hero" class="screen container">
+    <div class="hero">
+      <div>
+        <div class="hero-eyebrow" data-i18n="hero-eyebrow">博大中华文化学会 · 文化班人格测试</div>
+        <h1 data-i18n="hero-h1">在十个文化班和一位合作伙伴里，<br>遇见<span class="accent">最像你</span>的那一个。</h1>
+        <p class="lede" data-i18n="hero-lede">12 道关于日常选择的小问题，没有标准答案。答完之后，我们会从 10 个文化班和 1 位合作伙伴里，找到与你气质最接近的一个——顺便，多认识一点自己。</p>
+        <div class="meta-row">
+          <span data-i18n="meta-q">12 道日常选择</span>
+          <span data-i18n="meta-clubs">10 个文化班 + 1 位合作伙伴</span>
+        </div>
+        <button class="btn btn-primary" data-nav="quiz" data-i18n="cta-start">开始测试 →</button>
+      </div>
+      <div class="hero-art">
+        <div class="ring">
+          <img src="assets/brand/event-logo.png" alt="缘·华韵相逢 迎新营 20 周年">
+        </div>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <h3 data-i18n="step1-title">跟着直觉选</h3>
+        <p data-i18n="step1-text">没有标准答案，选择更像你的那一个。</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <h3 data-i18n="step2-title">遇见你的文化班</h3>
+        <p data-i18n="step2-text">12 道选择，找到与你气质最接近的文化班。</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <h3 data-i18n="step3-title">找到你的舞台</h3>
+        <p data-i18n="step3-text">看看适合你的地方，也欢迎实际来体验看看。</p>
+      </div>
+    </div>
+
+    <div class="about-block">
+      <h2 data-i18n="about-h2">关于这次测试</h2>
+      <p data-i18n="about-p1">12 道关于日常习惯和喜好的小问题，不需要去想「哪个答案更好」，只需要选择更接近真实自己的那一个。</p>
+      <p data-i18n="about-p2">最后，我们会从 10 个文化班和 1 位合作伙伴中，找到与你性格倾向最接近的一个。它不是能力测验，也不是硬性分配，更像是借一个熟悉的问题，重新认识一下自己，也顺便认识博大中华文化学会属下的文化班们和我们的合作伙伴。</p>
+    </div>
+
+    <div class="disclaimer">
+      <p data-i18n="disclaimer1">娱乐向测试 · 结果仅供参考，不代表唯一适合你的文化班</p>
+      <p data-i18n="disclaimer2">欢迎在迎新营现场，实际体验每一个文化班和合作伙伴</p>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section id="screen-quiz" class="screen container" hidden>
+    <div class="quiz-wrap">
+      <div class="quiz-top">
+        <span class="quiz-title" data-i18n="quiz-title">文化班人格探索</span>
+        <span class="quiz-counter"><span id="q-current">01</span> <small>/ <span id="q-total">12</span></small></span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill" style="width: 0%;"></div>
+      </div>
+
+      <div class="q-label">QUESTION <span id="q-index-label">01</span></div>
+      <h2 class="q-text" id="q-text"></h2>
+      <p class="q-hint" id="q-hint"></p>
+
+      <div class="options" id="options-wrap"></div>
+
+      <div class="quiz-nav">
+        <button class="link-btn" id="btn-prev" data-i18n="quiz-prev">← 上一题</button>
+        <span class="hint-right" data-i18n="quiz-nav-hint">点击选项，进入下一题</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESULT ============ -->
+  <section id="screen-result" class="screen container" hidden>
+    <div class="result-wrap">
+      <div class="portrait-wrap">
+        <div class="result-portrait">
+          <img id="r-image" src="" alt="">
+        </div>
+        <span class="logo-badge logo-badge-lg" id="r-logo-badge"><img id="r-logo" src="" alt=""></span>
+      </div>
+
+      <div class="result-kicker" id="r-kicker">与你相配的文化班</div>
+      <h1 class="result-name" id="r-name"></h1>
+      <div class="result-archetype" id="r-archetype"></div>
+
+      <div class="match-badge" id="r-match-badge">
+        <span data-i18n="match-label">匹配度</span> <b id="r-match-pct">—</b>
+      </div>
+
+      <div class="tag-row" id="r-tags"></div>
+
+      <p class="result-quote" id="r-quote"></p>
+      <div class="scroll-cue" data-i18n="scroll-cue">往下看，认识更完整的这个文化班 ↓</div>
+
+      <div class="card">
+        <div class="card-kicker" data-i18n="axes-card-kicker">这个文化班的气质光谱</div>
+        <h2 data-i18n="axes-card-h2">四维气质倾向</h2>
+        <div id="r-axes"></div>
+        <div class="quote-block" data-i18n="axes-note">光谱反映的是文化班整体的活动气质，不是绝对的评价标准——每个文化班里，都容得下不同性格的人。</div>
+      </div>
+
+      <div class="card">
+        <div class="card-kicker" data-i18n="why-card-kicker">为什么你们合适</div>
+        <h2 data-i18n="why-card-h2">为什么推荐这个文化班</h2>
+        <p id="r-why"></p>
+      </div>
+
+      <div class="two-col">
+        <div class="side-card bright">
+          <h3 id="r-bright-title">高光面</h3>
+          <p id="r-bright-text"></p>
+        </div>
+        <div class="side-card shadow">
+          <h3 id="r-shadow-title">阴暗面</h3>
+          <p id="r-shadow-text"></p>
+        </div>
+      </div>
+
+      <div class="card tinted" style="margin-top: 20px;">
+        <div class="card-kicker" data-i18n="amplified-kicker">当这种气质被放大时</div>
+        <p id="r-amplified" style="margin:0;"></p>
+      </div>
+
+      <div class="card about-card">
+        <div class="card-kicker" data-i18n="about-card-kicker">文化班档案</div>
+        <h2 id="r-about-name"></h2>
+        <ul>
+          <li><b data-i18n="about-label-activities">活动内容：</b><span id="r-about-activities"></span></li>
+          <li><b data-i18n="about-label-forwho">适合对象：</b><span id="r-about-forwho"></span></li>
+          <li><b data-i18n="about-label-line">一句话：</b><span id="r-about-line"></span></li>
+        </ul>
+      </div>
+
+      <div class="cta-row" id="r-cta-row">
+        <button class="btn btn-ghost" data-nav="quiz-retake" data-i18n="cta-retake">再测一次</button>
+        <button class="btn btn-primary" data-nav="directory" data-i18n="cta-browse">看看其他文化班 →</button>
+      </div>
+      <div class="cta-note" data-i18n="cta-note">匹配度为答题倾向的相似程度，不是能力或优劣的评价。</div>
+    </div>
+  </section>
+
+  <!-- ============ DIRECTORY ============ -->
+  <section id="screen-directory" class="screen container" hidden>
+    <div class="directory-head">
+      <h2 data-i18n="dir-h2">博大中华文化学会 · 文化班与合作伙伴</h2>
+      <p data-i18n="dir-p">点击任一文化班或合作伙伴，查看完整档案；或返回做一次测试，让我们帮你推荐。</p>
+    </div>
+    <div class="directory-grid" id="directory-grid"></div>
+    <div class="directory-foot">
+      <button class="btn btn-primary" data-nav="quiz" data-i18n="dir-cta">做个测试，帮我推荐 →</button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p data-i18n="footer">博大中华文化学会 Persatuan Senibudaya Zhong Hua UPM · 非官方娱乐向测试，仅供迎新营参考使用</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
