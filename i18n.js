@@ -42,7 +42,7 @@ const STRINGS = {
     en: "At the end, we'll match you with the cultural class (or partner) whose personality is closest to yours. It's not a skills test or a fixed assignment — more a fun excuse to reflect on yourself, while getting to know the cultural classes under Zhong Hua Cultural Arts Society UPM and our partner."
   },
   "disclaimer1": { zh: "娱乐向测试 · 结果仅供参考，不代表唯一适合你的文化班", en: "For fun only · Results are a reference, not the one “correct” cultural class for you" },
-  "disclaimer2": { zh: "欢迎在迎新营现场，实际体验每一个文化班和合作伙伴", en: "Come try every cultural class and our partner in person at orientation camp" },
+  "disclaimer2": { zh: "欢迎在迎新月现场，实际体验每一个文化班和合作伙伴", en: "Come try every cultural class and our partner in person at orientation month" },
 
   "quiz-title": { zh: "文化班人格探索", en: "Cultural Class Personality Quest" },
   "quiz-hint-default": { zh: "选择最接近你的那一项。", en: "Pick whichever feels closest to you." },
@@ -99,8 +99,8 @@ const STRINGS = {
   "dir-cta": { zh: "做个测试，帮我推荐 →", en: "Take the Quiz, Get Matched →" },
 
   "footer": {
-    zh: "博大中华文化学会 Persatuan Senibudaya Zhong Hua UPM · 非官方娱乐向测试，仅供迎新营参考使用",
-    en: "Zhong Hua Cultural Arts Society UPM (Persatuan Senibudaya Zhong Hua UPM) · Unofficial fun quiz, for orientation camp reference only"
+    zh: "博大中华文化学会 Persatuan Senibudaya Zhong Hua UPM · 非官方娱乐向测试，仅供迎新月参考使用",
+    en: "Zhong Hua Cultural Arts Society UPM (Persatuan Senibudaya Zhong Hua UPM) · Unofficial fun quiz, for orientation month reference only"
   },
 
   "page-title": { zh: "缘·华韵相逢 | 文化班人格测试", en: "Yuan · Where Splendor Begins | Cultural Class Personality Quiz" }
@@ -308,7 +308,7 @@ const CLUBS_EN = [
     amplified: "You just hummed a random line under your breath, and you've already quietly written the harmony for it.",
     axes: { energy: 55, stage: 60, style: 70, team: 45 },
     about: {
-      activities: "Vocal / instrument training, cover arrangements, orientation opening performance",
+      activities: "Vocal / instrument training, cover arrangements, orientation month opening performance",
       forWho: "Anyone who loves singing or playing an instrument and wants to get on stage",
       line: "Your voice deserves to be heard by more people."
     }
@@ -390,7 +390,7 @@ const QUESTIONS_TEXT_EN = [
     ]
   },
   {
-    q: "On the orientation camp stage, which act would you most want to be in?",
+    q: "On the stage at orientation month, which act would you most want to be in?",
     options: [
       "Singing an original song with a guitar in hand",
       "A martial arts form or weapon routine, crisp and clean",
@@ -416,7 +416,7 @@ const QUESTIONS_TEXT_EN = [
     ]
   },
   {
-    q: "After orientation camp ends, what do you hope people remember about you?",
+    q: "After orientation month ends, what do you hope people remember about you?",
     options: [
       "An energy like a drumbeat that gets everyone fired up",
       "The steady, clean note you held inside the ensemble",

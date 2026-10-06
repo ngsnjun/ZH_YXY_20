@@ -61,6 +61,19 @@
 
   /* ---------------- Quiz ---------------- */
 
+  // Option hover is switched on only after the pointer genuinely moves on a
+  // freshly rendered question (see .hover-ready in styles.css).
+  let lastPointer = { x: -1, y: -1 };
+  let armPos = null;
+  document.addEventListener("pointermove", e => {
+    lastPointer = { x: e.clientX, y: e.clientY };
+    if (!armPos) return;
+    if (Math.abs(e.clientX - armPos.x) + Math.abs(e.clientY - armPos.y) >= 3) {
+      document.getElementById("options-wrap").classList.add("hover-ready");
+      armPos = null;
+    }
+  });
+
   function resetQuiz() {
     state.index = 0;
     state.answers = new Array(QUESTIONS.length).fill(null);
@@ -84,6 +97,8 @@
     const letters = ["A", "B", "C", "D", "E"];
     const wrap = document.getElementById("options-wrap");
     wrap.innerHTML = "";
+    wrap.classList.remove("hover-ready");
+    armPos = { x: lastPointer.x, y: lastPointer.y };
     q.options.forEach((opt, idx) => {
       const btn = document.createElement("button");
       btn.className = "option";

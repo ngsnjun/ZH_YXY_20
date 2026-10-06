@@ -104,7 +104,7 @@ const CLUBS = [
   },
   {
     id: "xuanwu",
-    name: "旋舞团",
+    name: "旋·舞团",
     archetype: "流光旋者",
     image: "assets/clubs/xuanwu.jpg",
     tags: ["#节奏感拉满", "#优雅又利落", "#人群焦点体质"],
@@ -266,7 +266,7 @@ const CLUBS = [
     amplified: "只是随口哼了一句，你已经默默编好了和声。",
     axes: { energy: 55, stage: 60, style: 70, team: 45 },
     about: {
-      activities: "主唱／乐器训练、翻唱编曲、迎新营开幕演出",
+      activities: "主唱／乐器训练、翻唱编曲、迎新月开幕演出",
       forWho: "喜欢唱歌、玩乐器，想站上舞台的你",
       line: "你的声音，值得被更多人听见。"
     }
@@ -359,7 +359,7 @@ const QUESTIONS = [
     ]
   },
   {
-    q: "迎新营的舞台上，你最想登场的是：",
+    q: "迎新月的舞台上，你最想登场的是：",
     hint: "选择最接近你的那一项。",
     options: [
       { label: "抱着吉他，唱一首属于自己的歌", scores: { yinzi: 3 } },
@@ -388,7 +388,7 @@ const QUESTIONS = [
     ]
   },
   {
-    q: "迎新营结束后，你希望大家记住你的是：",
+    q: "迎新月结束后，你希望大家记住你的是：",
     hint: "选择最接近你的那一项。",
     options: [
       { label: "像鼓点一样让人热血沸腾的气势", scores: { tengshi: 3, langchao: 1 } },

@@ -401,12 +401,22 @@ main { min-height: 60vh; }
   transition: border-color 0.15s ease, transform 0.1s ease, background 0.15s ease;
 }
 
-.option:hover {
-  border-color: var(--ink-500);
-  background: var(--ink-100);
+/* Hover highlight only after the pointer actually moves on a new question
+   (app.js adds .hover-ready), and never on touch screens — otherwise the
+   option sitting under a resting pointer / a sticky touch-hover looks "selected". */
+@media (hover: hover) {
+  .options.hover-ready .option:hover {
+    border-color: var(--ink-500);
+    background: var(--ink-100);
+  }
 }
 
 .option:active { transform: scale(0.995); }
+
+.option:focus-visible {
+  outline: 2px solid var(--ink-500);
+  outline-offset: 2px;
+}
 
 .option .opt-letter {
   flex-shrink: 0;
