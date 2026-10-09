@@ -174,7 +174,14 @@
       matchPct = Math.max(60, Math.min(98, matchPct));
     }
 
-    const opts = { matched: true, matchPct };
+    // Top 3 recommendations. #1 keeps the percentage above; #2 and #3 are shown
+    // relative to #1 (their score ÷ #1's score × #1's percentage).
+    const top3 = ranked.slice(0, 3).map((r, i) => ({
+      id: r.id,
+      pct: i === 0 || top.score <= 0 ? matchPct : Math.max(1, Math.round(matchPct * r.score / top.score))
+    }));
+
+    const opts = { matched: true, matchPct, top3, rank: 0 };
     state.lastResult = { clubId: top.id, opts };
     renderResult(top.id, opts);
     showScreen("result");
@@ -193,6 +200,42 @@
   const LOGO_DARK = { langchao: true };
   const logoSrc = club => "assets/logos/" + club.id + ".png";
   const logoBadgeClass = (club, extra) => "logo-badge" + (extra ? " " + extra : "") + (LOGO_DARK[club.id] ? " dark" : "");
+
+  // "Your top 3" list on a quiz result. Tapping an item shows that class's full profile.
+  function renderTop3(opts) {
+    const card = document.getElementById("r-top3");
+    const list = document.getElementById("r-top3-list");
+    const items = opts && opts.matched && opts.top3;
+    if (!items || items.length < 2) {
+      card.hidden = true;
+      list.innerHTML = "";
+      return;
+    }
+    list.innerHTML = "";
+    items.forEach((item, i) => {
+      const c = findClub(item.id);
+      if (!c) return;
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "top3-item" + (i === (opts.rank || 0) ? " is-current" : "");
+      if (i === (opts.rank || 0)) btn.setAttribute("aria-current", "true");
+      btn.innerHTML =
+        '<span class="top3-rank">' + (i + 1) + "</span>" +
+        '<span class="' + logoBadgeClass(c, "logo-badge-sm") + '"><img src="' + logoSrc(c) + '" alt=""></span>' +
+        '<span class="top3-main"><span class="top3-name"></span><span class="top3-sub"></span></span>' +
+        '<span class="top3-pct">' + item.pct + "%</span>";
+      btn.querySelector(".top3-name").textContent = c.name;
+      btn.querySelector(".top3-sub").textContent = c.partner ? t("partner-badge") + " · " + c.archetype : c.archetype;
+      btn.addEventListener("click", () => {
+        const next = { matched: true, matchPct: item.pct, top3: items, rank: i };
+        state.lastResult = { clubId: item.id, opts: next };
+        renderResult(item.id, next);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+      list.appendChild(btn);
+    });
+    card.hidden = false;
+  }
 
   // Result-page labels that read "文化班" normally but "合作伙伴" for the partner.
   const PARTNER_LABEL_KEYS = ["scroll-cue", "axes-card-kicker", "axes-note", "why-card-h2", "about-card-kicker"];
@@ -225,8 +268,13 @@
     const quote = document.getElementById("r-quote");
     const scrollCue = document.querySelector(".scroll-cue");
 
+    renderTop3(opts);
+
     if (matched) {
-      kicker.textContent = labelFor("r-kicker-matched", isPartner);
+      const rank = (opts && opts.rank) || 0;
+      kicker.textContent = rank === 0
+        ? labelFor("r-kicker-matched", isPartner)
+        : t("r-kicker-rank" + (rank + 1));
       badge.hidden = false;
       document.getElementById("r-match-pct").textContent = opts.matchPct + "%";
       quote.textContent = "“" + club.quote + "”";
