@@ -696,6 +696,21 @@ main { min-height: 60vh; }
 
 .ig-link span { overflow-wrap: anywhere; }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.ig-link-sm {
+  margin-top: 0;
+  padding: 7px 14px;
+  font-size: 13px;
+  text-align: left;
+}
+
 .cta-row {
   display: flex;
   justify-content: center;

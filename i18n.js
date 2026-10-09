@@ -70,6 +70,8 @@ const STRINGS = {
   "about-label-forwho": { zh: "适合对象：", en: "Best for: " },
   "about-label-line": { zh: "一句话：", en: "In one line: " },
   "ig-follow": { zh: "在 Instagram 关注", en: "Follow on Instagram" },
+  "ig-society": { zh: "博大中华", en: "Zhong Hua UPM" },
+  "ig-event": { zh: "《缘·华韵相逢》迎新月活动", en: "Orientation Month Special Event" },
   "about-name-suffix": { zh: " 文化班档案", en: " — Cultural Class Profile" },
 
   "cta-retake": { zh: "再测一次", en: "Retake the Quiz" },
