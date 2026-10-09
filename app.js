@@ -272,6 +272,18 @@
     document.getElementById("r-about-activities").textContent = club.about.activities;
     document.getElementById("r-about-forwho").textContent = club.about.forWho;
     document.getElementById("r-about-line").textContent = club.about.line;
+
+    const igLink = document.getElementById("r-ig");
+    const igUrl = typeof INSTAGRAM !== "undefined" ? INSTAGRAM[club.id] : null;
+    if (igUrl) {
+      igLink.href = igUrl;
+      const handle = igUrl.replace(/\/+$/, "").split("/").pop();
+      document.getElementById("r-ig-text").textContent = t("ig-follow") + " @" + handle;
+      igLink.hidden = false;
+    } else {
+      igLink.hidden = true;
+      igLink.removeAttribute("href");
+    }
   }
 
   /* ---------------- Directory ---------------- */

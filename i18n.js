@@ -11,38 +11,38 @@ const STRINGS = {
   "nav-directory": { zh: "浏览全部文化班", en: "Browse All Cultural Classes" },
   "brand-sub": { zh: "文化班人格测试", en: "Cultural Class Personality Quiz" },
 
-  "hero-eyebrow": { zh: "博大中华文化学会 · 文化班人格测试", en: "Zhong Hua Cultural Arts Society UPM · Cultural Class Personality Quiz" },
+  "hero-eyebrow": { zh: "博大中华 · 文化班人格测试", en: "Zhong Hua Cultural Arts Society UPM · Cultural Class Personality Quiz" },
   "hero-h1": {
-    zh: "在十个文化班和一位合作伙伴里，<br>遇见<span class=\"accent\">最像你</span>的那一个。",
-    en: "Out of ten cultural classes and one partner,<br>meet the one that feels most <span class=\"accent\">like you</span>.",
+    zh: "在10个文化班和1个合作伙伴里，<br>遇见<span class=\"accent\">最像你</span>的那一个。",
+    en: "Out of 10 cultural classes and 1 partner,<br>meet the one that feels most <span class=\"accent\">like you</span>.",
     html: true
   },
   "hero-lede": {
-    zh: "12 道关于日常选择的小问题，没有标准答案。答完之后，我们会从 10 个文化班和 1 位合作伙伴里，找到与你气质最接近的一个——顺便，多认识一点自己。",
+    zh: "12 道关于日常选择的小问题，没有标准答案。答完之后，我们会从 10 个文化班和 1 个合作伙伴里，找到与你气质最接近的一个——顺便，多认识一点自己。",
     en: "12 quick questions about everyday choices — there's no right answer. At the end, we'll match you with the cultural class (or partner) whose vibe fits you best, and maybe you'll learn a little about yourself along the way."
   },
   "meta-q": { zh: "12 道日常选择", en: "12 quick questions" },
-  "meta-clubs": { zh: "10 个文化班 + 1 位合作伙伴", en: "10 cultural classes + 1 partner" },
+  "meta-clubs": { zh: "10 个文化班 + 1 个合作伙伴", en: "10 cultural classes + 1 partner" },
   "cta-start": { zh: "开始测试 →", en: "Start the Quiz →" },
 
   "step1-title": { zh: "跟着直觉选", en: "Follow Your Gut" },
   "step1-text": { zh: "没有标准答案，选择更像你的那一个。", en: "There's no right answer — just pick what feels like you." },
   "step2-title": { zh: "遇见你的文化班", en: "Meet Your Cultural Class" },
-  "step2-text": { zh: "12 道选择，找到与你气质最接近的文化班。", en: "12 choices to find the cultural class that matches your vibe." },
+  "step2-text": { zh: "12 道选择，找到与你气质最接近的文化班。", en: "12 choices to find the one that matches your vibe." },
   "step3-title": { zh: "找到你的舞台", en: "Find Your Stage" },
   "step3-text": { zh: "看看适合你的地方，也欢迎实际来体验看看。", en: "See where you might belong — and come try it out in person." },
 
   "about-h2": { zh: "关于这次测试", en: "About This Quiz" },
   "about-p1": {
     zh: "12 道关于日常习惯和喜好的小问题，不需要去想「哪个答案更好」，只需要选择更接近真实自己的那一个。",
-    en: "12 small questions about everyday habits and preferences. Don't overthink which answer is “better” — just pick the one closer to the real you."
+    en: "12 quick questions about everyday habits and preferences. Don't overthink which answer is “better” — just pick the one closest to the real you."
   },
   "about-p2": {
-    zh: "最后，我们会从 10 个文化班和 1 位合作伙伴中，找到与你性格倾向最接近的一个。它不是能力测验，也不是硬性分配，更像是借一个熟悉的问题，重新认识一下自己，也顺便认识博大中华文化学会属下的文化班们和我们的合作伙伴。",
-    en: "At the end, we'll match you with the cultural class (or partner) whose personality is closest to yours. It's not a skills test or a fixed assignment — more a fun excuse to reflect on yourself, while getting to know the cultural classes under Zhong Hua Cultural Arts Society UPM and our partner."
+    zh: "最后，我们会从 10 个文化班和 1 个合作伙伴中，找到与你性格倾向最接近的一个。它不是能力测验，也不是硬性分配，更像是借一个熟悉的问题，重新认识一下自己，也顺便认识博特拉大学中华文化学会旗下的文化班以及合作伙伴。",
+    en: "At the end, we'll match you with the cultural class (or partner) whose personality is closest to yours. It's not a skills test or a fixed assignment — it’s more of a fun way to reflect on yourself, while getting to know Zhong Hua Cultural Arts Society UPM’s cultural classes and our partner."
   },
-  "disclaimer1": { zh: "娱乐向测试 · 结果仅供参考，不代表唯一适合你的文化班", en: "For fun only · Results are a reference, not the one “correct” cultural class for you" },
-  "disclaimer2": { zh: "欢迎在迎新月现场，实际体验每一个文化班和合作伙伴", en: "Come try every cultural class and our partner in person at orientation month" },
+  "disclaimer1": { zh: "娱乐向测试 · 结果仅供参考，不代表唯一适合你的文化班", en: "For fun only · Your result is just a reference, not the only cultural class that suits you" },
+  "disclaimer2": { zh: "欢迎到迎新月特别活动现场，实际体验各个文化班及合作伙伴", en: "Come try every cultural class and our partner in person at our Orientation Month special event, <Serendipity · Journeying Together>" },
 
   "quiz-title": { zh: "文化班人格探索", en: "Cultural Class Personality Quest" },
   "quiz-hint-default": { zh: "选择最接近你的那一项。", en: "Pick whichever feels closest to you." },
@@ -69,6 +69,7 @@ const STRINGS = {
   "about-label-activities": { zh: "活动内容：", en: "Activities: " },
   "about-label-forwho": { zh: "适合对象：", en: "Best for: " },
   "about-label-line": { zh: "一句话：", en: "In one line: " },
+  "ig-follow": { zh: "在 Instagram 关注", en: "Follow on Instagram" },
   "about-name-suffix": { zh: " 文化班档案", en: " — Cultural Class Profile" },
 
   "cta-retake": { zh: "再测一次", en: "Retake the Quiz" },
@@ -99,8 +100,8 @@ const STRINGS = {
   "dir-cta": { zh: "做个测试，帮我推荐 →", en: "Take the Quiz, Get Matched →" },
 
   "footer": {
-    zh: "博大中华文化学会 Persatuan Senibudaya Zhong Hua UPM · 非官方娱乐向测试，仅供迎新月参考使用",
-    en: "Zhong Hua Cultural Arts Society UPM (Persatuan Senibudaya Zhong Hua UPM) · Unofficial fun quiz, for orientation month reference only"
+    zh: "博特拉大学中华文化学会 Zhong Hua Cultural Arts Society UPM",
+    en: "Zhong Hua Cultural Arts Society UPM"
   },
 
   "page-title": { zh: "缘·华韵相逢 | 文化班人格测试", en: "Yuan · Where Splendor Begins | Cultural Class Personality Quiz" }
@@ -308,7 +309,7 @@ const CLUBS_EN = [
     amplified: "You just hummed a random line under your breath, and you've already quietly written the harmony for it.",
     axes: { energy: 55, stage: 60, style: 70, team: 45 },
     about: {
-      activities: "Vocal / instrument training, cover arrangements, orientation month opening performance",
+      activities: "Vocal / instrument training, cover arrangements, Orientation Month opening performance",
       forWho: "Anyone who loves singing or playing an instrument and wants to get on stage",
       line: "Your voice deserves to be heard by more people."
     }
@@ -322,7 +323,7 @@ const QUESTIONS_TEXT_EN = [
   {
     q: "You suddenly have a completely free weekend — you're most likely to:",
     options: [
-      "Get a few friends together to put on a silly sketch until your stomach hurts",
+      "Get a few friends together to put on a silly sketch and laugh until your stomach hurts",
       "Spread out rice paper or a sketchbook and write or draw quietly alone",
       "Pull out your diabolo and grind away at a new trick you can't quite catch",
       "Pick up an erhu, guzheng or flute and drill one piece until it's smooth"
@@ -332,7 +333,7 @@ const QUESTIONS_TEXT_EN = [
     q: "At a get-together, everyone's looking forward to you:",
     options: [
       "Grabbing the gongs and drums and instantly heating up the room",
-      "Busting out an improvised street-dance move the moment music starts",
+      "Busting out an improvised street-dance move the moment the music starts and getting everyone moving",
       "Doing impressions of teachers or friends until everyone's in stitches",
       "Setting out a board and pulling a friend into a match"
     ]
@@ -349,7 +350,7 @@ const QUESTIONS_TEXT_EN = [
   {
     q: "On a really irritable day, how do you let it out?",
     options: [
-      "Train until you're drenched in sweat and out of strength",
+      "Throw punches and kicks until you’re drenched in sweat and out of strength",
       "Turn the irritation into an over-the-top mini play — you feel better once it's out",
       "Put on headphones and dance hard to the beat"
     ]
@@ -358,7 +359,7 @@ const QUESTIONS_TEXT_EN = [
     q: "While practicing, which moment hooks you the most?",
     options: [
       "Finally catching a tricky move cleanly",
-      "The whole team stepping on the same drumbeat, trusting each other without hesitation",
+      "The whole team stepping on the same drumbeat and lifting each other up without hesitation",
       "Facing the mirror and polishing one movement to perfection, competing with yesterday's you",
       "A harmony finally locking in, giving you goosebumps"
     ]
@@ -382,7 +383,7 @@ const QUESTIONS_TEXT_EN = [
     ]
   },
   {
-    q: "When you're alone, what do you enjoy most?",
+    q: "When you're alone, what do you enjoy most:",
     options: [
       "Picking up a brush to write a few characters or sketch something small",
       "Stretching slowly on a mat, bringing your attention back to your breath",
@@ -390,7 +391,7 @@ const QUESTIONS_TEXT_EN = [
     ]
   },
   {
-    q: "On the stage at orientation month, which act would you most want to be in?",
+    q: "On the stage at Orientation Month, which act would you most want to be in?",
     options: [
       "Singing an original song with a guitar in hand",
       "A martial arts form or weapon routine, crisp and clean",
@@ -399,7 +400,7 @@ const QUESTIONS_TEXT_EN = [
     ]
   },
   {
-    q: "At the orientation-day booths, you'd head first to:",
+    q: "At the Orientation Month special event booths, you'd head first to:",
     options: [
       "The chess booth, to sit down for a match",
       "The calligraphy and painting booth, to write your name with a brush",
@@ -410,13 +411,13 @@ const QUESTIONS_TEXT_EN = [
     q: "When do you feel the most accomplished?",
     options: [
       "When a hands-on trick finally lands steadily while the whole crowd holds its breath",
-      "When a song you sang gets hummed along by someone else",
+      "When someone starts humming along to a song you sang",
       "When a dance is finished and every movement looks like a painting",
       "After a week of steady stretching and breathing, your sleep and mood have evened out"
     ]
   },
   {
-    q: "After orientation month ends, what do you hope people remember about you?",
+    q: "After Orientation Month ends, what do you hope people remember about you?",
     options: [
       "An energy like a drumbeat that gets everyone fired up",
       "The steady, clean note you held inside the ensemble",

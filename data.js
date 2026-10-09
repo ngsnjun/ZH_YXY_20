@@ -369,7 +369,7 @@ const QUESTIONS = [
     ]
   },
   {
-    q: "迎新日的体验摊位，你会先走向：",
+    q: "迎新月特别活动的体验摊位，你会先走向：",
     hint: "选择最接近你的那一项。",
     options: [
       { label: "棋盘摊位，坐下来和人对弈一局", scores: { jingqi: 3, cheling: 1 } },
@@ -397,6 +397,22 @@ const QUESTIONS = [
     ]
   }
 ];
+
+/* Instagram accounts. To add one later, just add a line: id: "https://www.instagram.com/<account>/".
+   Classes without a line here simply don't show the Instagram button. */
+const INSTAGRAM = {
+  wumen: "https://www.instagram.com/wushu_upm/",
+  yueyuan: "https://www.instagram.com/chineseorchestra_upm/",
+  cheling: "https://www.instagram.com/diabolo_class_upm/",
+  wenyi: "https://www.instagram.com/upm_wenyiban/",
+  xuanwu: "https://www.instagram.com/upmzhonghuaxuanwu/",
+  langchao: "https://www.instagram.com/langchaojufang_upm/",
+  yujia: "https://www.instagram.com/yoga_upm/",
+  jingqi: "https://www.instagram.com/chessclass_upm/",
+  tengshi: "https://www.instagram.com/upm_tengshipavilion/",
+  wujixian: "https://www.instagram.com/uxd_upm/",
+  yinzi: "https://www.instagram.com/yinziofficial/"
+};
 
 function getClub(id) {
   return CLUBS.find(c => c.id === id);

@@ -674,6 +674,28 @@ main { min-height: 60vh; }
 .about-card li { margin-bottom: 6px; }
 .about-card li:last-child { margin-bottom: 0; }
 
+.ig-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 9px 16px;
+  border: 1.5px solid var(--ink-200);
+  border-radius: 999px;
+  color: var(--ink-800);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.ig-link:hover {
+  background: var(--ink-100);
+  border-color: var(--ink-500);
+}
+
+.ig-link span { overflow-wrap: anywhere; }
+
 .cta-row {
   display: flex;
   justify-content: center;
